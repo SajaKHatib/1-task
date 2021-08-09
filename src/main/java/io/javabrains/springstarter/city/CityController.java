@@ -47,7 +47,7 @@ public class CityController {
 		cityService.updateCity(city);
 	}
 	
-	@DeleteMapping("/cities/{id}")
+	@DeleteMapping("/{id}")
 	public void deleteTopic(@PathVariable String id ) {
 		cityService.deleteTopic(id);
 	}

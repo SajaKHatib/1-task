@@ -22,8 +22,13 @@ import io.javabrains.springstarter.city.City;
 
 public class AreaController {
 	
-	@Autowired
+
+
 	private AreaService areaService ;
+
+	public AreaController (AreaService areaService) {
+		this.areaService = areaService;
+	}
 	
 	//@RequestMapping(method=RequestMethod.GET,value="/areas")
 	//public List<Area> getAllarea(){
