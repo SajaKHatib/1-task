@@ -1,10 +1,10 @@
-package io.javabrains.springstarter.city;
+package io.javabrains.Service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+import io.javabrains.Model.City;
+import io.javabrains.Repository.CityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,21 +16,21 @@ public class CityService {
 	
 
 public List<City> getAllCities(){
-	List<City> cities = new ArrayList<>();
-	cityRepository.findAll().forEach(cities::add);
-	return cities ;
+	return cityRepository.findAll() ;
 	
 }
 public Optional<City> getCity(String id) {
+
 	return cityRepository.findById(id);
 }
-public City addCity(City city) {
+public City createCity(City city) {
 	
-	City city2 = new City();
-	city2.setId(city.getId());
-	city2.setName(city.getName());
-	city2.setSite(city.getSite());
-	 return cityRepository.save(city2);		
+	//City city2 = new City();
+	//city2.setId(city.getId());
+	//city2.setName(city.getName());
+	//city2.setSite(city.getSite());
+
+	 return cityRepository.save(city);
 }
 
 public void updateCity( City city) {
@@ -39,8 +39,9 @@ public void updateCity( City city) {
 	}
 	
 
-public void deleteTopic(String id) {
-	cityRepository.deleteById(id);	
+public void deleteCity(String id) {
+
+	cityRepository.deleteById(id);
 }
 	
 

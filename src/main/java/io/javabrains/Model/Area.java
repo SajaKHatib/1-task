@@ -1,15 +1,9 @@
 
-package io.javabrains.springstarter.Area;
+package io.javabrains.Model;
+import org.springframework.lang.NonNull;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
-import io.javabrains.springstarter.city.City;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "area")
@@ -33,15 +27,20 @@ public class Area {
 	
 	
 	public String getId() {
+
 		return id;
 	}
+
 	public void setId(String id) {
+
 		this.id = id;
 	}
 	public String getName() {
+
 		return name;
 	}
 	public void setName(String name) {
+
 		this.name = name;
 	}
 	
@@ -50,10 +49,12 @@ public class Area {
 	}
 
 	public void setSite(String site) {
+
 		this.site = site;
 	}
 
 	public City getCity_id() {
+
 		return city_id;
 	}
 
@@ -68,9 +69,5 @@ public class Area {
 	//public void setCity(City city) {
 	//	this.city = city;
 	//}
-
-	
-
-	
 
 }

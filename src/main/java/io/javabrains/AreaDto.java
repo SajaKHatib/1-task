@@ -1,4 +1,4 @@
-package io.javabrains.springstarter.Area;
+package io.javabrains;
 
 public class AreaDto {
     private String cityId;
